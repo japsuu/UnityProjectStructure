@@ -1,11 +1,10 @@
-The Ramen Unity Style Guide
+The Unity Style Guide
 ===========================
 
 ### For file structure, naming conventions and other things
 
-These are guidelines for keeping your project organized and allow your team to quickly find the assets they need. Games are large projects that span several months, thus having standardized conventions that make sense will avoid headaches in the long run.
-
-Note that your team and project might have different needs, use different software, etc. Use this guide only as a base to decide on what works for your team. Every project should have its own, easy to find, style guide, so everyone in the team is up to date in the project's conventions.
+>These guidelines are modified from [stillwwater](https://github.com/stillwwater/UnityStyleGuide) for keeping projects organized and allowing me to quickly find the assets I need.
+>Having standardized conventions that make sense will avoid headaches in the long run.
 
 # Table of Contents
 
@@ -14,7 +13,6 @@ Note that your team and project might have different needs, use different softwa
     - [Source code](#source-code)
     - [Non-code assets](#non-code-assets)
 - [Directory/File structure](#directory-file-structure)
-    - [Assets](#assets)
     - [Scripts](#scripts)
     - [Models](#models)
 - [Workflow](#workflow)
@@ -27,7 +25,7 @@ Note that your team and project might have different needs, use different softwa
 
 # Asset Naming
 
-First of all, no\ spaces\ on file or directory names.
+First of all, no spaces on file or directory names.
 
 ## Folders
 
@@ -122,23 +120,23 @@ Use `Y up`, `-Z forward` and `uniform scale` when exporting.
 
 File extension: `PNG`, `TIFF` or `HDR`
 
-Choose either a `Specularity/Glossiness` or `Roughness/Metallic` workflow. This depends on the software being used and what your artists are more comfortable with. Specularity maps have the advantage of being having the possibility to be RGB maps instead of grayscale (useful for tinted metals), apart from that there is little difference between the result from either workflow.
+Choose either a `Specularity/Glossiness` or `Roughness/Metallic` workflow. This depends on the software being used and what your artists are more comfortable with. Specular maps have the advantage of being having the possibility to be RGB maps instead of grayscale (useful for tinted metals), apart from that there is little difference between the result from either workflow.
 
 ### Texture Suffixes
 
-Suffix | Texture
-:------|:-----------------
-`_AL`  | Albedo
-`_SP`  | Specular
-`_R`   | Roughness
-`_MT`  | Metallic
-`_GL`  | Glossiness
-`_N`   | Normal
-`_H`   | Height
-`_DP`  | Displacement
-`_EM`  | Emission
-`_AO`  | Ambient Occlusion
-`_M`   | Mask
+| Suffix | Texture           |
+|:-------|:------------------|
+| `_AL`  | Albedo            |
+| `_SP`  | Specular          |
+| `_R`   | Roughness         |
+| `_MT`  | Metallic          |
+| `_GL`  | Glossiness        |
+| `_N`   | Normal            |
+| `_H`   | Height            |
+| `_DP`  | Displacement      |
+| `_EM`  | Emission          |
+| `_AO`  | Ambient Occlusion |
+| `_M`   | Mask              |
 
 ### RGB Masks
 
@@ -150,11 +148,11 @@ texture_N.png   # Normal Map
 texture_M.png   # Mask
 ```
 
-Channel | Spec/Gloss        | Rough/Metal
-:-------|:------------------|:-----------
-R       | Specularity       | Roughness
-G       | Glossiness        | Metallic
-B       | Ambient Occlusion | Ambient Occlusion
+| Channel | Spec/Gloss        | Rough/Metal       |
+|:--------|:------------------|:------------------|
+| R       | Specular          | Roughness         |
+| G       | Glossiness        | Metallic          |
+| B       | Ambient Occlusion | Ambient Occlusion |
 
 #### The blue channel can vary depending on the type of material:
 
@@ -185,8 +183,11 @@ Preload small sound clips to memory, load on the fly for longer music and less f
 
 # Be Consistent
 
-> The point of having style guidelines is to have a common vocabulary of coding so people can concentrate on what you're saying rather than on how you're saying it. We present global style rules here so people know the vocabulary, but local style is also important. If code you add to a file looks drastically different from the existing code around it, it throws readers out of their rhythm when they go to read it. Avoid this.
+> The point of having style guidelines is to have a common vocabulary of coding so people can concentrate on what you're saying rather than on how you're saying it.
+> We present global style rules here so people know the vocabulary, but local style is also important.
+> If code you add to a file looks drastically different from the existing code around it, it throws readers out of their rhythm when they go to read it.
+> Avoid this.
 
--- [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html)
+-- [Microsoft C# Style Guide](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions)
 
 ---
